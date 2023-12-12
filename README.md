@@ -90,7 +90,7 @@ Projede kullanılan UML diyagramına [buradan](https://prnt.sc/8Zh8ACM9kQT8) ula
 
 - Java Spring Boot
 - Spring Data JPA
-- PostgreSQL veya MySQL
+- PostgreSQL (Örnek veri tabanı `vet.sql` dosyasıyla GitHub'a yüklenmiştir)
 - Maven
 
 ## İletişim
