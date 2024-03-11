@@ -1,4 +1,4 @@
-FROM maven:3.9.5-openjdk-17 AS build
+FROM maven:3.9.5-openjdk-20.0.2
 
 WORKDIR /app
 
@@ -7,7 +7,7 @@ COPY VetApp/src /app/src
 
 RUN mvn clean package -Dmaven.test.skip=true
 
-FROM openjdk:17
+FROM openjdk:20.0.2
 
 WORKDIR /app
 
