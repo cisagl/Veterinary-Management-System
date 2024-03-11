@@ -1,5 +1,6 @@
 package isaoglu.cahit.VetApp.entitiy;
 
+import com.fasterxml.jackson.annotation.JsonFormat;
 import com.fasterxml.jackson.annotation.JsonIgnore;
 import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
@@ -30,6 +31,7 @@ public class Animal {
     @Column(name = "animal_color")
     private String color;
     @Column(name = "animal_birth_date")
+    @JsonFormat(pattern = "yyyy-MM-dd")
     private LocalDate dateOfBirth;
 
     @OneToMany(mappedBy = "animal", cascade = {CascadeType.REMOVE, CascadeType.MERGE}, fetch = FetchType.LAZY)

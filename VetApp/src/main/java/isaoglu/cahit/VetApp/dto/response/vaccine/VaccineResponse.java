@@ -16,4 +16,5 @@ public class VaccineResponse {
     private LocalDate protectionStartDate;
     private LocalDate protectionFinishDate;
     private long animalId;
+    private long reportId;
 }

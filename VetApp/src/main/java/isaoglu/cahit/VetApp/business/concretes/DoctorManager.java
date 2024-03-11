@@ -29,6 +29,7 @@ public class DoctorManager implements IDoctorService {
     public DoctorResponse save(DoctorSaveRequest doctorSaveRequest) {
         Doctor saveDoc = this.modelMapperService.forRequest().map(doctorSaveRequest, Doctor.class);
         System.out.println(saveDoc.getMail());
+
         if (this.doctorRepo.existsByMail(saveDoc.getMail())){
             throw new IllegalArgumentException("Mail adresi daha önce girilmiştir, lütfen farklı bir adres giriniz");
         }
@@ -39,7 +40,7 @@ public class DoctorManager implements IDoctorService {
     public DoctorResponse update(long id, DoctorUpdateRequest doctorUpdateRequest) {
         Doctor updateDoc = this.modelMapperService.forRequest().map(doctorUpdateRequest, Doctor.class);
         updateDoc.setId(id);
-        if (this.doctorRepo.existsByMail(updateDoc.getMail())){
+        if (this.doctorRepo.existsByMail(updateDoc.getMail()) && !this.doctorRepo.findById(id).getMail().equals(updateDoc.getMail())){
             throw new IllegalArgumentException("Mail adresi daha önce girilmiştir, lütfen farklı bir adres giriniz");
         }
         return modelMapperService.forResponse().map(this.doctorRepo.save(updateDoc), DoctorResponse.class);

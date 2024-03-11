@@ -5,18 +5,12 @@ import isaoglu.cahit.VetApp.business.abstracts.ICustomerService;
 import isaoglu.cahit.VetApp.core.modelmapper.IModelMapperService;
 import isaoglu.cahit.VetApp.dao.AnimalRepo;
 import isaoglu.cahit.VetApp.dao.CustomerRepo;
-import isaoglu.cahit.VetApp.dao.VaccineRepo;
 import isaoglu.cahit.VetApp.dto.request.animal.AnimalSaveRequest;
 import isaoglu.cahit.VetApp.dto.request.animal.AnimalUpdateRequest;
 import isaoglu.cahit.VetApp.dto.response.animal.AnimalResponse;
 import isaoglu.cahit.VetApp.entitiy.Animal;
-import isaoglu.cahit.VetApp.entitiy.Customer;
-import isaoglu.cahit.VetApp.entitiy.Vaccine;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
-
-import java.time.LocalDate;
-import java.util.Collections;
 import java.util.List;
 
 @Service

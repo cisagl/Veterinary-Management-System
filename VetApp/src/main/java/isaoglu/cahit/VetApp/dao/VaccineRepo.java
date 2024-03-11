@@ -10,7 +10,6 @@ import java.util.List;
 
 @Repository
 public interface VaccineRepo extends JpaRepository<Vaccine, Long> {
-    Vaccine findByName(String name);
     Vaccine findById(long id);
     boolean existsByCode(String code);
     boolean existsByNameAndCode(String name, String code);

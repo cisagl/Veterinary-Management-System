@@ -30,6 +30,7 @@ public class AnimalSaveRequest {
     private LocalDate dateOfBirth;
     @NotNull(message = "Sahipsiz hayvan kayıt edilemez")
     private Customer customer;
+
     /*
     {
         "name": "Kedi",

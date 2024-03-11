@@ -47,7 +47,7 @@ public class CustomerManager implements ICustomerService {
         Customer updateCustomer = this.modelMapperService.forRequest().map(customerUpdateRequest, Customer.class);
         updateCustomer.setId(id);
 
-        if (this.customerRepo.existsByMail(updateCustomer.getMail())){
+        if (this.customerRepo.existsByMail(updateCustomer.getMail()) && !this.customerRepo.findById(id).getMail().equals(updateCustomer.getMail())){
             throw new IllegalArgumentException("Mail adresi daha önce girilmiştir, lütfen farklı bir adres giriniz");
         }
         return this.modelMapperService.forResponse().map(this.customerRepo.save(updateCustomer), CustomerResponse.class);

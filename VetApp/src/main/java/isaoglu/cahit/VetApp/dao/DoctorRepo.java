@@ -6,7 +6,6 @@ import org.springframework.stereotype.Repository;
 
 @Repository
 public interface DoctorRepo extends JpaRepository<Doctor, Long> {
-    Doctor findByName(String name);
     Doctor findById(long id);
     boolean existsByMail(String mail);
 

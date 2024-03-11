@@ -29,7 +29,8 @@ public class VaccineUpdateRequest {
     @Temporal(TemporalType.DATE)
     @NotNull(message = "Bağışıklık bitiş tarihi boş bırakılamaz")
     private LocalDate protectionFinishDate;
-
     @NotNull(message = "Aşının yapıldığı hayvanın ID'si boş bırakılamaz")
     private Animal animal;
+    @NotNull(message = "Aşının rapor ID'si boş bırakılamaz")
+    private long reportId;
 }

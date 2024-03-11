@@ -1,4 +1,5 @@
 package isaoglu.cahit.VetApp.entitiy;
+import com.fasterxml.jackson.annotation.JsonFormat;
 import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
 import lombok.Data;
@@ -15,6 +16,7 @@ public class AvailableDate {
     @Column(name = "available_date_id")
     private long id;
     @Column(name = "available_date_vet")
+    @JsonFormat(pattern = "yyyy-MM-dd")
     private LocalDate availableDate;
     @ManyToOne
     @JoinColumn(name = "available_date_doctor_id", referencedColumnName = "doctor_id")
