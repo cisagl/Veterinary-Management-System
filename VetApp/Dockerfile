@@ -1,4 +1,4 @@
-FROM maven:3.8.4-openjdk-17 AS build
+FROM maven:3.9.5-openjdk-20.0.2 AS build
 
 WORKDIR /app
 
@@ -7,7 +7,7 @@ COPY ./src /app/src
 
 RUN mvn clean package -Dmaven.test.skip=true
 
-FROM openjdk:17-jdk
+FROM openjdk:20.0.2-jdk
 
 WORKDIR /app
 
