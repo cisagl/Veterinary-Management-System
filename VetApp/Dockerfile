@@ -2,8 +2,8 @@ FROM maven:3.9.5-openjdk-17 AS build
 
 WORKDIR /app
 
-COPY VetApp/pom.xml /app
-COPY VetApp/src /app/src
+COPY pom.xml /app
+COPY src /app/src
 
 RUN mvn clean package -Dmaven.test.skip=true
 
