@@ -85,7 +85,7 @@ Projenin API'larını kullanmak için aşağıdaki end pointleri gözden geçire
 
 ## UML Diyagramı
 
-Projede kullanılan UML diyagramına [buradan](https://prnt.sc/8Zh8ACM9kQT8) ulaşabilirsiniz.
+Projede kullanılan UML diyagramına [buradan](https://prnt.sc/nIVwk-SV1Al-) ulaşabilirsiniz.
 
 ## Teknolojiler
 
