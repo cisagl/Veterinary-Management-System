@@ -17,8 +17,8 @@ Projeyi yerel bilgisayarınıza klonlayın ve çalıştırmak için aşağıdaki
 1. Projeyi klonlayın:
 
    ```bash
-   git clone https://github.com/kullanici_adi/veteriner-yonetim-sistemi.git
-   cd veteriner-yonetim-sistemi
+   git clone https://github.com/cisagl/veteriner-yonetim-sistemi.git
+   cd Veterinary-Management-System
    ```
 
 2. Veritabanını oluşturun (PostgreSQL veya MySQL kullanabilirsiniz).
